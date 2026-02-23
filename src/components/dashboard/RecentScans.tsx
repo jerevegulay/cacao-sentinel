@@ -1,13 +1,6 @@
 import { recentScans } from "@/lib/mock-data";
-import { cn } from "@/lib/utils";
 import { Camera, TrendingUp } from "lucide-react";
-
-const severityBadge = {
-  Healthy: "bg-success/15 text-success",
-  Mild: "bg-accent/15 text-accent-foreground",
-  Moderate: "bg-warning/15 text-warning",
-  Severe: "bg-destructive/15 text-destructive",
-};
+import SeverityBadge from "@/components/SeverityBadge";
 
 const RecentScans = () => {
   return (
@@ -35,9 +28,7 @@ const RecentScans = () => {
                 <td className="py-3 text-muted-foreground">{scan.zoneName}</td>
                 <td className="py-3 text-muted-foreground">{scan.date}</td>
                 <td className="py-3">
-                  <span className={cn("px-2 py-1 rounded-full text-xs font-medium", severityBadge[scan.severity])}>
-                    {scan.severity}
-                  </span>
+                  <SeverityBadge severity={scan.severity} />
                 </td>
                 <td className="py-3">
                   <div className="flex items-center gap-1.5">
