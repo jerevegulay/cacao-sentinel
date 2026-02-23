@@ -7,6 +7,11 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Monitoring from "./pages/Monitoring";
+import Farms from "./pages/Farms";
+import Reports from "./pages/Reports";
+import Alerts from "./pages/Alerts";
+import UsersPage from "./pages/Users";
+import SettingsPage from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +27,11 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/monitoring" element={<Monitoring />} />
+          <Route path="/farms" element={<Farms />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/users" element={<UsersPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
