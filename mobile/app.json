@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "CacaoGuard Mobile",
+    "slug": "cacaoguard-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#2D5016"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#2D5016"
+      },
+      "package": "com.cacaoguard.mobile"
+    },
+    "plugins": ["expo-router"]
+  }
+}
